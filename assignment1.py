@@ -15,7 +15,7 @@ memoryOrTime = 0;
 numberOfIterations = 1000;
 
 def add(a, b):
-	"""Adds two numbers that are represented as Strings
+    """Adds two numbers that are represented as Strings
   
     Takes two numbers, each represented as a string, and finds the sum. The numbers,
     as with the result, can be significantly large (above max integer size).
@@ -46,7 +46,7 @@ def add(a, b):
     return answer
 
 def generate(n):
-	"""Generates a random number of size n.
+    """Generates a random number of size n.
 
     Generates a random number containing digits. This number is represented as a string
     to enable generating very large numbers.
