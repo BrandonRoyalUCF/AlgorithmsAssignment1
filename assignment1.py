@@ -42,6 +42,7 @@ time = []
 print('size of input numbers', needed)
 numerator = 0
 denominator = 0
+maxHeight = 0.0
 for iteration in range(0,numberOfIterations):
     x = generate(needed)
     y = generate(needed)
@@ -52,8 +53,12 @@ for iteration in range(0,numberOfIterations):
     print('y = ', y)
     print('x + y = ',  result)
     time.append(end-start)
+    maxHeight = max(maxHeight, end-start)
     numerator = numerator + end-start
     denominator = denominator+1
-print('average = ', numerator/denominator)
+text = 'Average = ', numerator/denominator
+plt.xlabel('Runs')
+plt.ylabel('Time')
 plt.plot(range(0, numberOfIterations), time)
+plt.text(0, maxHeight*0.98, text)
 plt.savefig(plotFile)
