@@ -12,7 +12,7 @@ plotFile = 'performance.png'
 # a plot of the memory usage
 memoryOrTime = 0;
 # The number of times the program should add numbers of length needed
-numberOfIterations = 1;
+numberOfIterations = 1000;
 
 def add(a, b):
     a = a[::-1]
@@ -51,9 +51,9 @@ for iteration in range(0,numberOfIterations):
     print('x = ', x)
     print('y = ', y)
     print('x + y = ',  result)
+    time.append(end-start)
     numerator = numerator + end-start
     denominator = denominator+1
-length.append(needed)
-time.append(numerator/denominator)
-plt.plot(length,time)
+print('average = ', numerator/denominator)
+plt.plot(range(0, numberOfIterations), time)
 plt.savefig(plotFile)
