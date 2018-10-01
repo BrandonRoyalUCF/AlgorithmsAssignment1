@@ -20,3 +20,13 @@ Here is what we used to setup and run the program.
     - Click install package at the bottom and wait the install will tell you when it is finished succesfully.<br/>
   - Finally, you will need to configure the script to run. Our script is "assignment1.py". <br/>
     - Once selected clicking run will run the program and the "performance.png" file will be created.<br/>
+2. Settings<br/>
+  - All our settings are listed immediately following the import calls.<br/>
+  - needed<br/>
+    - This is the size of the numbers that you would like added together. So entering a 4 will generate numbers of length 4.<br/>
+  - plotFile<br/>
+    - This is the name of the file that will be created that has the graph of time over runs.<br/>
+  - numberOfIterations<br/>
+    - This is how many pairs of numbers should be added together before the program will stop.<br/>
+3. Final Notes<br/>
+  - The program will also print each pair of numbers followed by their summation.<br/>
