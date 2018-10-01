@@ -18,6 +18,7 @@ Here is what we used to setup and run the program.
     - Under the python interpreter tab click the plus sign on the right hand side of the package manager.<br/>
     - I recommend a search at the top for matplotlib. You only need the package marked matplotlib all of the extras are not necessary.<br/>
     - Click install package at the bottom and wait the install will tell you when it is finished succesfully.<br/>
+    - Next you will also need to install memory_profiler which will be the same as the previous with the memory_profiler name.<br/>
   - Finally, you will need to configure the script to run. Our script is "assignment1.py". <br/>
     - Once selected clicking run will run the program and the "performance.png" file will be created.<br/>
 2. Settings<br/>
