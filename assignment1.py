@@ -15,6 +15,19 @@ memoryOrTime = 0;
 numberOfIterations = 1000;
 
 def add(a, b):
+	"""Adds two numbers that are represented as Strings
+  
+    Takes two numbers, each represented as a string, and finds the sum. The numbers,
+    as with the result, can be significantly large (above max integer size).
+
+    Args:
+        a: A string of digits that represents a valid whole number.
+        b: A string of digits that represents a valid whole number.
+
+    Returns:
+        A string of digits that represents the sum of a and b.
+    """
+
     a = a[::-1]
     b = b[::-1]
     carry = 0
@@ -33,6 +46,18 @@ def add(a, b):
     return answer
 
 def generate(n):
+	"""Generates a random number of size n.
+
+    Generates a random number containing digits. This number is represented as a string
+    to enable generating very large numbers.
+
+    Args:
+        n: The number of digits the random number will have.
+
+    Returns:
+        A string representing the random number. The length will always be n.
+    """
+
     answer = str(random.randint(1,9))+ ''.join([str(random.randint(0,9)) for _ in range(1,n)])
     return answer
     
