@@ -86,6 +86,7 @@ def memory_test(n):
 if __name__ == '__main__':
     length = []
     time = []
+    mem_avg = []
 
     print('size of input numbers', needed)
     numerator = 0
@@ -98,12 +99,14 @@ if __name__ == '__main__':
         start = timer()
         result = add(x,y)
         end = timer()
+        print(iteration)
         print('x = ', x)
         print('y = ', y)
         print('x + y = ',  result)
-        memory_points = memory_usage((memory_test, (needed,),), interval=0.00000001)
+        memory_points = memory_usage((memory_test, (needed,),), interval=0.0000000001)
         memorySum = sum(memory_points)
-        avgMemory = memorySum / numberOfIterations
+        avgMemory = memorySum / len(memory_points)
+        mem_avg.append(avgMemory)
         time.append(end-start)
         maxHeight = max(maxHeight, end-start)
         numerator = numerator + end-start
@@ -123,6 +126,6 @@ if __name__ == '__main__':
     plt.xlabel('Runs')
     plt.ylabel('Memory Usage')
     plt.title(graphTitle2)
-    plt.plot(range(0, numberOfIterations), memory_points)
+    plt.plot(range(0, numberOfIterations), mem_avg)
     plt.text(0, maxMemory*0.98, memText)
     plt.savefig(plotFile2)
