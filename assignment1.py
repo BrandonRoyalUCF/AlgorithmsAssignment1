@@ -4,16 +4,16 @@ from memory_profiler import memory_usage
 import matplotlib.pyplot as plt
 
 # This specifies the size of the randomly generated large numbers
-needed = 4
+needed = 8
 # This should be the name of the file that you would like the program to
 # generate that will have the performance data
-plotFile1 = 'Nof4Time.png'
-plotFile2 = 'Nof4Memory.png'
+plotFile1 = 'Nof8Time.png'
+plotFile2 = 'Nof8Memory.png'
 # The number of times the program should add numbers of length needed
 numberOfIterations = 1000
 # Title of the graph of time per run
-graphTitle1 = 'N of 4 Time'
-graphTitle2 = 'N of 4 Memory'
+graphTitle1 = 'N of 8 Time'
+graphTitle2 = 'N of 8 Memory'
 
 
 def add(a, b):
@@ -93,6 +93,7 @@ if __name__ == '__main__':
     denominator = 0
     maxHeight = 0.0
     maxMemory = 0.0
+    summationMemory = 0.0
     for iteration in range(0,numberOfIterations):
         x = generate(needed)
         y = generate(needed)
