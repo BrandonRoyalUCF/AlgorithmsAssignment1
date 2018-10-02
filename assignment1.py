@@ -10,7 +10,7 @@ needed = 8
 plotFile1 = 'Nof8Time.png'
 plotFile2 = 'Nof8Memory.png'
 # The number of times the program should add numbers of length needed
-numberOfIterations = 10
+numberOfIterations = 1000
 # Title of the graph of time per run
 graphTitle1 = 'N of 8 Time'
 graphTitle2 = 'N of 8 Memory'
