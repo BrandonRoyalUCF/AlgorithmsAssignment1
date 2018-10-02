@@ -111,10 +111,11 @@ if __name__ == '__main__':
         maxHeight = max(maxHeight, end-start)
         numerator = numerator + end-start
         denominator = denominator+1
-    for j in memory_points:
+    for j in mem_avg:
         maxMemory = max(maxMemory, j)
+        summationMemory = summationMemory + j
     text = 'Average = ', numerator/denominator
-    memText = 'Average = ', avgMemory
+    memText = 'Average = ', summationMemory/len(mem_avg)
     plt.figure(0)
     plt.xlabel('Runs')
     plt.ylabel('Time')
